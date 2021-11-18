@@ -5,17 +5,6 @@ AtEar is a scalable and efficient system, and also the first web-based wireless 
 This Wireless Vulnerability Analysis/Management Solution, AtEar, can be utilized both by businesses and in the home.  <br>
 For business use, AtEar utilizes fingerprint devices for access to the  network and to analyze the current wireless network conditions. <br>The automatic penetration testing function makes it possible to analyze wireless vulnerability conveniently and meticulously. <br>AtEar for home networks inspects network security conditions and monitors for any unregistered devices.  <br>
 
-# Intro
-
-> In short, [AtEar](http://www.norma.co.kr) is a wireless pentest system.<br>
-> AtEar provides a web-based user interface.<br>
-> AtEar is easy and fast to use.<br>
-
-![alt AtEar_Product] (https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/AtEar_Product.jpg)
-<h3>Is your company’s wireless network secure?<br>
-AtEar helps keep your wireless network safe from hackers and intruders.<br></h3>
-<br>
-
 ### Operation Video
 <a href="https://www.youtube.com/embed/qkqEirRf88E"> Operation Video Link</a>
 <br>
@@ -25,42 +14,22 @@ AtEar helps keep your wireless network safe from hackers and intruders.<br></h3>
 3. Wireless Pentesting(WEP, WPA1, WPA2)
 4. Network Information Getting(IP, Connected Host Info)
 5. Fake AP
-  - Google Phishing Sites
-  - Facebook Phishing Sites
-  - Twitter Phishing Sites
+    - Google Phishing Sites
+    - Facebook Phishing Sites
+    - Twitter Phishing Sites
 6. WIDS(Wireless intrusion detection system)
-  - Disassocation Flood
-  - Deauth Flood
-  - WESSID-NG Attack
-  - Koreck Chopchop attack
-  - Fragmentation PGRA Attack
-  - MDK MICHEAL SHUTDOWN Exploitation TKIP Attack
-  - Attack By TKIPUN-NG
-  - Authentication DOS Attack
-  - Assocation Flood
-  - High Amount of Assocation Sent
-  - Suspect Rouge AP
-  - Detected Beacon Flood
-
-These features will be released this month.<br>
-<b>Network Pentesting</b><br>
-  - FTP Brute Force
-  - SSH Brute Force
-  - Telnet Brute Force
-  - SMTP Brute Force
-  - POP Brute Force
-  - IMAP Brute Force
-  - LDAP Brute Force
-  - SMB Brute Force
-  - rlogin Brute Force
-  - MSSQL Brute Force
-  - MYSQL Brute Force
-  - PGSQL Brute Force
-  - VNC Brute Force
-  - SNMP Brute Force
-
-### Most recommended systems
-`Developed by Ubuntu 14.04 LTS(amd64) and python 2.7v`
+    - Disassocation Flood
+    - Deauth Flood
+    - WESSID-NG Attack
+    - Koreck Chopchop attack
+    - Fragmentation PGRA Attack
+    - MDK MICHEAL SHUTDOWN Exploitation TKIP Attack
+    - Attack By TKIPUN-NG
+    - Authentication DOS Attack
+    - Assocation Flood
+    - High Amount of Assocation Sent
+    - Suspect Rouge AP
+    - Detected Beacon Flood
 
 ### Most recommended USB Lancards
 ***It will aircrack-ng supoorted USB-Lancard***<br>
@@ -102,42 +71,24 @@ These features will be released this month.<br>
 `python-pip`<br>
 
 ### AtEar Installation Instructions
-Clone a copy of the main AtEar git repo by running:<br>
-`sudo apt-get install git`<br>
-`git clone https://github.com/NORMA-Inc/AtEar.git`<br>
-Enter the AtEar directory and run the install script:<br>
-`cd ./AtEar/`<br>
-`sudo bash install.sh`<br>
+
+Clone a copy of the main AtEar git repo by running:
+````
+cd /opt/
+git clone https://github.com/NORMA-Inc/AtEar
+cd AtEar 
+````
+Install python dependencies:
+````
+virtualnenv -p python2.7 venv # create a virtual env for deprecated python2.7
+source venv/bin/activate # activate the virtual env
+python install -r requirements.txt # install recommended requirements
+````
 
 ### How to Run
-`cd ./AtEar/`<br>
-`sudo python run.py --iface wlan* <br>
-`Open Web Browsers`<br>
-`127.0.0.1:8080`<br>
+````
+cd /opt/AtEar/
+python run.py --iface <interface>
+````
+This will spawn the AtEar web application on TCP port 0.0.0.0:8080.
 
-### AtEar Customers
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/Samsung.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/KoreaTelecom.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/police1.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/edu1.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/korea_rail.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/Ministry_en.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/kgu.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/koreauniversity.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/kbs.png" width="350">
-<img src="https://raw.githubusercontent.com/NORMA-Inc/AtEar/master/product_img/kaits_.png" width="350">
-
-### Reference
-AtEar’s flexible and convenient functionality can overcome the limitations of WIPS. <br>
-This achievement has led to partnerships with telecommunications companies SAMSUNG and KT. Many other small and middle-sized businesses and public institutions have chosen AtEar as their favorite wireless security solution thanks to its user friendliness and competitive cost. Satisfied customers include prominent institutions such as the Seoul City Hall, the Korea Rail Network Authority and Korea University. <br>
-
-### AtEar-Demo Add-on Features
-1. A database for a particular sector of a wireless device can be specified.
-2. The demo program can provide the latest Access Point Firmware Database.
-3. The program has some project management capabilities.
-4. The program can provide a function report.<br>
-***AtEar-Demo is a free 30-Day Trial Version***
-
-### Requesting the AtEar-Demo Version
-[NORMA-Inc Homepage](http://www.norma.co.kr)<br>
-Contact us [contact@norma.co.kr](mailto:contact@norma.co.kr)
